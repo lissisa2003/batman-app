@@ -5,12 +5,15 @@ import { MovieService } from './movie.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'batman-app';
   movieList: Movie[] = [];
   movieDetailList: MovieDetail[] = [];
+  sourceList= [];
+  filterTerm = '';
+  previouslyFiltered = false;
 
   constructor(private movieService: MovieService){
 
@@ -22,13 +25,43 @@ export class AppComponent implements OnInit {
       if (this.movieList.length > 0) {
         this.movieList.forEach(movie => {
           this.movieService.getMovieDetail(movie.imdbID).subscribe(movie => this.movieDetailList.push(movie));
-        })
+        });
       }
     });
-
-
-
   }
+
+  filterByDecade(decade: string){
+    if (!this.previouslyFiltered ){
+      this.sourceList = this.movieDetailList;
+    }  
+    this.previouslyFiltered =true;
+
+    this.filterTerm = decade;
+
+    switch(this.filterTerm){
+      case('80s'):
+        this.movieDetailList = this.sourceList.filter(movie=> new Date(movie.Released) < new Date('1990-01-01'));
+        break;
+        
+      case('90s'):
+        this.movieDetailList = this.sourceList.filter(movie=> new Date(movie.Released) >= new Date('1990-01-01') 
+          && new Date(movie.Released) < new Date('2000-01-01'));
+        break;
+
+      case('00s'):
+        this.movieDetailList = this.sourceList.filter(movie=> new Date(movie.Released) >= new Date('2000-01-01') 
+          && new Date(movie.Released) < new Date('2010-01-01'));
+          break;
+
+      case('10s'):
+        this.movieDetailList = this.sourceList.filter(movie=> new Date(movie.Released) >= new Date('2010-01-01'));
+        break;
+
+      default:
+        this.sourceList;
+    }
+  }
+
 }
 
 

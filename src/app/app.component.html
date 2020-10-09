@@ -1,3 +1,14 @@
+
+<div class="filter-button-container">
+  <button [class]="filterTerm === '80s' ? 'filter-button selected' : 'filter-button'" 
+  (click)="filterByDecade('80s')">1980s</button>
+  <button [class]="filterTerm === '90s' ? 'filter-button selected' : 'filter-button'" 
+  (click)="filterByDecade('90s')">1990s</button>
+  <button [class]="filterTerm === '00s' ? 'filter-button selected' : 'filter-button'" 
+  (click)="filterByDecade('00s')">2000s</button>
+  <button [class]="filterTerm === '10s' ? 'filter-button selected' : 'filter-button'"
+  (click)="filterByDecade('10s')">2010s</button>
+</div>
 <movie-card *ngFor="let movie of movieDetailList" [movie]="movie"></movie-card>
 
 

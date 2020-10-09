@@ -12,6 +12,4 @@ import { MovieDetail } from '../movie';
 
     constructor() { }
 
-
-
   }
