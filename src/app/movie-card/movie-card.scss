@@ -1,0 +1,64 @@
+.movie-card {
+  height: 300px;
+  width: 90%;
+  margin: 20px auto;
+  border: 3px solid #000;
+  border-radius: 7px;
+  background-color: #eee;
+}
+
+.left-side {
+ display: inline-block;
+ width: 25%;
+ height: 100%;
+}
+
+.poster {
+  height: 250px;
+  margin: 25px;
+  border-radius: 14px;
+}
+
+.right-side {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.title {
+  font-size: 1.8em;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.rated,
+.runtime,
+.released {
+  display: inline-block;
+}
+
+.rated {
+  color: grey;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin-right: 20px;
+  padding: 2px;
+  font-family: "IBM Plex Serif", serif;
+  box-shadow: 1px 1px 1px 1px #aaa;
+}
+
+.runtime {
+  padding-right: 50%;
+}
+
+button {
+  background-color: goldenrod;
+  color: #fff;
+  border:none;
+  height: 2.5em;
+  width: 25%;
+  font-size: 1.2em;
+  font-weight: 700;
+  border-radius: 7px;
+}

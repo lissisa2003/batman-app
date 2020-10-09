@@ -4,12 +4,13 @@
 </div>
 <div class="right-side">
   <span class="title">{{movie.Title}}</span>
+  <hr>
   <div class="details-bar">
-    <span class="rated">{{movie.Rated}}</span>
-    <span class="runtime">{{movie.Runtime}}</span>
-    <span class="released">{{movie.Released}}</span>
+    <div class="rated">{{movie.Rated}}</div>
+    <div class="runtime">{{movie.Runtime}}</div>
+    <div class="released">{{movie.Released}}</div>
   </div>
   <p class="plot">{{movie.Plot}}</p>
-  <button><a href="">View on IMDB</a></button>
+  <a [href]="'https://www.imdb.com/title/' + movie.imdbID"><button>View on IMDB</button></a>
 </div>
 </div>

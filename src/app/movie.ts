@@ -30,7 +30,7 @@ export class MovieDetail {
     Metascore: number;
     imdbRating: number;
     imdbVotes: number;
-    imdbId: string;
+    imdbID: string;
     Type: string;
     DVD: string;
     BoxOffice: string;
