@@ -1,10 +1,12 @@
+@import './../../variables.scss';
+
 .movie-card {
-  height: 300px;
-  width: 90%;
+  border-radius: 8px;
+  border: 2px solid $near-black;
+  height: 240px;
+  width: 696px;
+  background-color: $light-grey;
   margin: 20px auto;
-  border: 3px solid #000;
-  border-radius: 7px;
-  background-color: #eee;
 }
 
 .left-side {
@@ -14,9 +16,10 @@
 }
 
 .poster {
-  height: 250px;
-  margin: 25px;
-  border-radius: 14px;
+  height: 208px;
+  width: 140px;
+  margin: 16px;
+  border-radius: 8px;
 }
 
 .right-side {
@@ -24,12 +27,15 @@
   width: 70%;
   height: 100%;
   vertical-align: top;
+  margin: 23px 0;
 }
 
 .title {
-  font-size: 1.8em;
-  font-weight: 700;
-  padding: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  height: 18px;
+  line-height: 18px;
+  width: 180px;
 }
 
 .rated,
@@ -39,26 +45,54 @@
 }
 
 .rated {
-  color: grey;
-  border: 1px solid grey;
-  border-radius: 3px;
+
+  border: 1px solid $dark-grey;
+  border-radius: 4px;
+  height: 22px;
+  width: 58px;
   margin-right: 20px;
   padding: 2px;
-  font-family: "IBM Plex Serif", serif;
-  box-shadow: 1px 1px 1px 1px #aaa;
+  font-family: "Courier", serif;
 }
 
 .runtime {
+  color: $near-black;
   padding-right: 50%;
+  font-family: "ArialMT", "Open-Sans", sans-serif;
+  font-size: 14px;
+  height: 19px;
+  line-height: 18px;
+  width: 50px;
+}
+
+.released {
+  color: $near-black;
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  text-align: right;
+}
+
+.plot {
+  color: $near-black;
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  height: 57px;
+  width: 498px;
+}
+
+.button-wrapper {
+  text-align: right;
 }
 
 button {
-  background-color: goldenrod;
-  color: #fff;
+  background-color:$gold;
+  color:$white;
   border:none;
-  height: 2.5em;
-  width: 25%;
   font-size: 1.2em;
   font-weight: 700;
-  border-radius: 7px;
+  border-radius: 4px;
+  height: 40px;
+  width: 193px;
 }

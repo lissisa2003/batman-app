@@ -11,6 +11,9 @@
     <div class="released">{{movie.Released}}</div>
   </div>
   <p class="plot">{{movie.Plot}}</p>
-  <a [href]="'https://www.imdb.com/title/' + movie.imdbID"><button>View on IMDB</button></a>
+  <div class="button-wrapper">
+    <a [href]="'https://www.imdb.com/title/' + movie.imdbID"><button>View on IMDB</button></a>
+  </div>
+  
 </div>
 </div>
