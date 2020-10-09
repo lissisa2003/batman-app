@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { MovieDetail } from '../movie';
 
 
 @Component({
@@ -7,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ['./movie-card.scss']
   })
   export class MovieCardComponent {
+    @Input() movie: MovieDetail;
+
     constructor() { }
 
 

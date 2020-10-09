@@ -1,40 +1,40 @@
 export class Movie {
-  title: string;
-  year: number;
-  imdbId: string;
-  type: string;
-  posterURL: string
+  Title: string;
+  Year: number;
+  imdbID: string;
+  Type: string;
+  Poster: string
 }
 
 export class MovieDetail {
-    title: string;
-    year: number;
-    rated: string;
-    released: Date;
-    runtime: string;
-    genre: string;
-    director: string;
-    writer: string;
-    actors: string;
-    plot: string;
-    language: string;
-    country: string;
-    awards: string;
-    poster: string;
-    ratings: [
+    Title: string;
+    Year: number;
+    Rated: string;
+    Released: Date;
+    Runtime: string;
+    Genre: string;
+    Director: string;
+    Writer: string;
+    Actors: string;
+    Plot: string;
+    Language: string;
+    Country: string;
+    Awards: string;
+    Poster: string;
+    Ratings: [
         {
-            source: string;
-            value: string;
+            Source: string;
+            Value: string;
         }
     ];
-    metascore: number;
+    Metascore: number;
     imdbRating: number;
     imdbVotes: number;
     imdbId: string;
-    type: string;
+    Type: string;
     DVD: string;
-    boxOffice: string;
-    production: string;
-    website: string;
-    response: boolean;
+    BoxOffice: string;
+    Production: string;
+    Website: string;
+    Response: boolean;
 }

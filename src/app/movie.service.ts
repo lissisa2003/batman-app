@@ -7,16 +7,17 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class MovieService {
-  private apiUrl = 'http://www.omdbapi.com/&apikey=5a488304'
+  private apiUrl = 'http://www.omdbapi.com/';
+  private apiKey = '&apikey=5a488304';
 
   constructor( private http: HttpClient) { }
 
 
-  getMovieList(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.apiUrl + '?s=Batman');
+  getMovieList(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}?s=Batman${this.apiKey}`);
   }
 
-  getMovieDetail(imdbId: string): Observable<MovieDetail> {
-    return this.http.get<MovieDetail>(this.apiUrl + '?i=' + imdbId);
+  getMovieDetail(imdbId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}?i=${imdbId}${this.apiKey}`);
   }
 }
