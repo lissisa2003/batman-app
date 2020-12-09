@@ -1,5 +1,7 @@
 @import './../variables.scss';
 
+
+
 .filter-button-container {
   text-align: right;
   width: 696px;
@@ -17,7 +19,7 @@
   font-weight: 600;
   &.selected {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-    background-color: $blue;
+    background-color: $gold;
     color: $white;
   }
 }

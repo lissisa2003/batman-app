@@ -45,19 +45,19 @@
 }
 
 .rated {
-  border: 1px solid $dark-grey;
-  border-radius: 4px;
+  border-bottom: 1px solid $dark-grey;
   height: 22px;
   width: 58px;
   margin-right: 20px;
   padding: 2px;
-  font-family: "Courier", serif;
+  font-family: "Arial", "Open Sans", sans-serif;
+  text-align: center;
 }
 
 .runtime {
   color: $near-black;
   padding-right: 50%;
-  font-family: "ArialMT", "Open Sans", sans-serif;
+  font-family: "Arial", "Open Sans", sans-serif;
   font-size: 14px;
   height: 19px;
   line-height: 18px;
@@ -66,7 +66,7 @@
 
 .released {
   color: $near-black;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Arial", "Open Sans", sans-serif;
   font-size: 14px;
   height: 18px;
   line-height: 18px;
@@ -75,7 +75,7 @@
 
 .plot {
   color: $near-black;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Arial", "Open Sans", sans-serif;
   font-size: 16px;
   height: 57px;
   width: 498px;

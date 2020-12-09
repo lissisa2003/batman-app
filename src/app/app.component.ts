@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
         break;
 
       default:
-        this.sourceList;
+        this.movieDetailList = this.sourceList;
     }
   }
 
