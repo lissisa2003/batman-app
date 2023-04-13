@@ -1,4 +1,4 @@
-
+<h1>Batman Through the Ages</h1>
 <div class="filter-button-container">
   <button [class]="filterTerm === '' ? 'filter-button selected' : 'filter-button'" 
   (click)="filterByDecade('')">All</button>
@@ -10,6 +10,8 @@
   (click)="filterByDecade('00s')">2000s</button>
   <button [class]="filterTerm === '10s' ? 'filter-button selected' : 'filter-button'"
   (click)="filterByDecade('10s')">2010s</button>
+  <button [class]="filterTerm === '20s' ? 'filter-button selected' : 'filter-button'"
+  (click)="filterByDecade('20s')">2020s</button>
 </div>
 <movie-card *ngFor="let movie of movieDetailList" [movie]="movie"></movie-card>
 

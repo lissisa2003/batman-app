@@ -54,7 +54,12 @@ export class AppComponent implements OnInit {
           break;
 
       case('10s'):
-        this.movieDetailList = this.sourceList.filter(movie=> new Date(movie.Released) >= new Date('2010-01-01'));
+        this.movieDetailList = this.sourceList.filter(movie=> new Date(movie.Released) >= new Date('2010-01-01')
+          && new Date(movie.Released) < new Date('2020-01-01'));
+        break;
+
+      case('20s'):
+        this.movieDetailList = this.sourceList.filter(movie=> new Date(movie.Released) >= new Date('2020-01-01'));
         break;
 
       default:
