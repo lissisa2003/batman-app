@@ -25,9 +25,9 @@
 .right-side {
   display: inline-block;
   width: 70%;
-  height: 100%;
+  height: calc(100% - 46px);
   vertical-align: top;
-  margin: 23px 0;
+  padding: 23px 0;
 }
 
 .title {
