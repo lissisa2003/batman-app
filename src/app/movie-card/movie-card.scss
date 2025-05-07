@@ -1,11 +1,11 @@
-@import './../../variables.scss';
+@use './../../variables.scss';
 
 .movie-card {
   border-radius: 8px;
-  border: 2px solid $near-black;
+  border: 2px solid variables.$near-black;
   height: 240px;
   width: 696px;
-  background-color: $light-grey;
+  background-color: variables.$light-grey;
   margin: 20px auto;
 }
 
@@ -54,12 +54,12 @@
   font-weight: 700;
   border-radius: 3px;
   background-color: black;
-  color: $gold;
+  color: variables.$gold;
   font-family: "Arial", "Open Sans", sans-serif;
 }
 
 .runtime {
-  color: $near-black;
+  color: variables.$near-black;
   padding-right: 50%;
   font-family: "Arial", "Open Sans", sans-serif;
   font-size: 14px;
@@ -69,7 +69,7 @@
 }
 
 .released {
-  color: $near-black;
+  color: variables.$near-black;
   font-family: "Arial", "Open Sans", sans-serif;
   font-size: 14px;
   height: 18px;
@@ -78,7 +78,7 @@
 }
 
 .plot {
-  color: $near-black;
+  color: variables.$near-black;
   font-family: "Arial", "Open Sans", sans-serif;
   font-size: 16px;
   height: 57px;
@@ -90,8 +90,8 @@
 }
 
 button {
-  background-color:$gold;
-  color:$white;
+  background-color:variables.$gold;
+  color:variables.$white;
   border:none;
   font-size: 1.2em;
   font-weight: 700;

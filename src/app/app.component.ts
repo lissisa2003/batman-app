@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Movie, MovieDetail } from './movie';
 import { MovieService } from './movie.service';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
+    imports: [MovieCardComponent],
 })
 export class AppComponent implements OnInit {
   title = 'batman-app';
@@ -15,17 +16,14 @@ export class AppComponent implements OnInit {
   sourceList= [];
   filterTerm = '';
   previouslyFiltered = false;
-
-  constructor(private movieService: MovieService){
-
-  }
+  #movieService= inject(MovieService);
 
   ngOnInit() {
-    this.movieService.getMovieList().subscribe(movies => {
+    this.#movieService.getMovieList().subscribe(movies => {
       this.movieList = movies['Search'];
       if (this.movieList.length > 0) {
         this.movieList.forEach(movie => {
-          this.movieService.getMovieDetail(movie.imdbID).subscribe(movie => this.movieDetailList.push(movie));
+          this.#movieService.getMovieDetail(movie.imdbID).subscribe(movie => this.movieDetailList.push(movie));
         });
       }
     });
