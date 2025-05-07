@@ -1,4 +1,4 @@
-@import './../variables.scss';
+@use './../variables.scss';
 
 h1{
   color: white;
@@ -17,9 +17,9 @@ h1{
 }
 
 .filter-button {
-  background: $lightest-grey;
+  background:variables.$lightest-grey;
   border-radius: 3px 3px;
-  border: 1px solid $lighter-grey;
+  border: 1px solid variables.$lighter-grey;
   height: 36px;
   width: 92px;
   font-family: "WhitneyHTF-SemiBold", "Open Sans", sans-serif;
@@ -27,8 +27,8 @@ h1{
   font-weight: 600;
   &.selected {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-    background-color: $gold;
-    color: $white;
-    border: 1px solid $gold;
+    background-color: variables.$gold;
+    color: variables.$white;
+    border: 1px solid variables.$gold;
   }
 }

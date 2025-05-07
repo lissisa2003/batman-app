@@ -1,18 +1,20 @@
+@let currentMovie = movie();
+
 <div class="movie-card">
 <div class="left-side">
-  <img class="poster" src={{movie.Poster}}/>
+  <img class="poster" src={{currentMovie.Poster}}/>
 </div>
 <div class="right-side">
-  <span class="title">{{movie.Title}}</span>
+  <span class="title">{{currentMovie.Title}}</span>
   <hr>
   <div class="details-bar">
-    <div class="rated">{{movie.Rated}}</div>
-    <div class="runtime">{{movie.Runtime}}</div>
-    <div class="released">{{movie.Released}}</div>
+    <div class="rated">{{currentMovie.Rated}}</div>
+    <div class="runtime">{{currentMovie.Runtime}}</div>
+    <div class="released">{{currentMovie.Released}}</div>
   </div>
-  <p class="plot">{{movie.Plot}}</p>
+  <p class="plot">{{currentMovie.Plot}}</p>
   <div class="button-wrapper">
-    <a [href]="'https://www.imdb.com/title/' + movie.imdbID"><button>View on IMDB</button></a>
+    <a [href]="'https://www.imdb.com/title/' + currentMovie.imdbID"><button>View on IMDB</button></a>
   </div>
   
 </div>

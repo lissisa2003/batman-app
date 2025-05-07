@@ -13,6 +13,6 @@
   <button [class]="filterTerm === '20s' ? 'filter-button selected' : 'filter-button'"
   (click)="filterByDecade('20s')">2020s</button>
 </div>
-<movie-card *ngFor="let movie of movieDetailList" [movie]="movie"></movie-card>
-
-
+@for(movie of movieDetailList; track $index) {
+  <movie-card [movie]="movie"></movie-card>
+}
