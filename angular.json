@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "batman-app:build"
+            "buildTarget": "batman-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "batman-app:build:production"
+              "buildTarget": "batman-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "batman-app:build"
+            "buildTarget": "batman-app:build"
           }
         },
         "test": {
